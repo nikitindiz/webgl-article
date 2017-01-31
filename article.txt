@@ -1,1 +1,54 @@
+WebGL width of Line into the Windows browsers
 
+Few words before we start…
+It’s my first article in English, my first article on medium.com and my first article about WebGL and ThreeJS
+
+I hope that readers know ThreeJS a little bit.
+Of course it might look like “reinventing the wheel” :) but why not ;)
+What happened?
+A couple of days ago I had the problem: how to draw lines with custom width of line on WebGL into the Windows browsers. Currently the Windows browsers support only 1px line width (due to the use of DirectX Angle Layer).
+You can check it yourself here.
+If you take a pause and try to search over the Internet, you will find one of following decisions:
+- Using the command line parameter for Chrome: --use-gl=desktop
+It says Chrome should use OpenGL instead of DirectX
+No a common decision.
+
+- Simulating line width by creating triangles. Take more details here
+A more common decision, but it’s not my way :D
+
+- Also you can find a good article Drawing Lines is Hard of MATT DESLAURIERS with his library webgl-lines
+Good, but it’s not my choice
+
+My solution
+For my decision I use THREE.BufferGeometry, THREE.Points and illusion :)
+I guess we have some BufferGeometry (call it base).
+The common algorithm:
+- Get the position attribute from base.
+- Walk by all points into the position attribute.
+- On each step, calculate the number of new points between the current point and the previous point depending on the distance between the selected points and the size of the particle.
+- Generate new points and add them into the result array.
+- Make new THREE.BufferGeometry and add to it the position attribute based on the generated positions array.
+In fact, the following method does everything :)
+
+Let’s look at an example
+
+You can see it looks quite simular to the THREE.Line, but if you try to make double click then you’ll get a different result.
+The trick is to change the size of the particle.
+In order to calculate the optimum number of points into the geometry, we need to find the optimum blending ratio of particles. The ratio depends on an image template of a particle. For the example I use the following image. I’ve found that the ratio of my image is 10/SIZE_OF_PARICLE, for another image it’ll be a different value. I understand that it looks quite strange but I’ve not found any better decision for that.
+
+
+What’s next?
+First and foremost, we’ve almost solved the width problem. Why almost? Because it’s still kludge or dirty hack. But we have an opportunity to make intersting effects.
+
+- Since we can use THREE.ShaderMaterial, we can customize the whole drawing process — to make a more advanced shader program.
+
+- Also we are able to use different templates of particles.
+
+- And make a complicated stuctures:
+
+I hope someone found the article interesting and helpful.
+I wait for your comments.
+P.S. If it’s a horrible stuff. Please, let me know about it in comments. Maybe ThreeJS has tools for all that.
+P.P.S Please let me know about mistakes in my text by DM on twitter.com/artzub or artzub[at]gmail.com
+Best regards,
+Artem Zubkov
