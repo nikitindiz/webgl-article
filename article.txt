@@ -39,7 +39,7 @@ You can see it looks quite similar to the THREE.Line, but if you try to make dou
 
 The trick is to change the size of the particle.
 
-In order to calculate the optimum number of points into the geometry, we need to find the optimum blending ratio of particles. The ratio depends on an image template of a particle. For the example I use the following image. I’ve found that the ratio of my image is 10/SIZE_OF_PARICLE, for another image it’ll be a different value. I understand that it looks quite strange but I’ve not found any better decision for that.
+In order to calculate an optimal number of points into the geometry, we need to find the optimal blending ratio of particles. The ratio depends on particle image template. For the example I use the following image. I’ve found that the ratio of my image is 10/SIZE_OF_PARICLE, for another image it’ll be a different value. I know that it may look quite weird but I didn't find any better solution other than that.
 
 
 What’s next?
