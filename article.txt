@@ -43,17 +43,19 @@ In order to calculate an optimal number of points into the geometry, we need to 
 
 
 What’s next?
-First and foremost, we’ve almost solved the width problem. Why almost? Because it’s still kludge or dirty hack. But we have an opportunity to make intersting effects.
+First and foremost, we’ve almost solved the width problem. Why almost? Because it’s still a kludge or dirty hack. But now we have an opportunity to make interesting effects.
 
-- Since we can use THREE.ShaderMaterial, we can customize the whole drawing process — to make a more advanced shader program.
+- Since we use THREE.ShaderMaterial, we are able to customize the whole drawing process. It allows us to make more advanced shader program.
 
 - Also we are able to use different templates of particles.
 
-- And make a complicated stuctures:
+- And we can make complicated structures:
 
-I hope someone found the article interesting and helpful.
-I wait for your comments.
-P.S. If it’s a horrible stuff. Please, let me know about it in comments. Maybe ThreeJS has tools for all that.
+I hope you'll find the article interesting and helpful.
+Feel free to comment and ask questions.
+
+P.S. If it’s a horrible stuff. Please, let me know about it. Maybe ThreeJS has tools for all that.
+
 P.P.S Please let me know about mistakes in my text by DM on twitter.com/artzub or artzub[at]gmail.com
 Best regards,
 Artem Zubkov
