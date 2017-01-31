@@ -35,7 +35,7 @@ In fact, the following method does everything :)
 
 Let’s look at an example
 
-You can see it looks quite similar to the THREE.Line, but if you try to make double click then you’ll get a different result.
+As you can see it looks quite similar to the THREE.Line, but if you try to make double click then you’ll get a different result.
 
 The trick is to change the size of the particle.
 
