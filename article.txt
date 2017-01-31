@@ -5,9 +5,11 @@ It’s my first article in English, my first article on medium.com and my first 
 
 I hope readers know ThreeJS a little bit.
 Of course it might look like “reinventing the wheel” :) but why not ;)
+
 What happened?
-A couple of days ago I had the problem: how to draw lines with custom width of line on WebGL into the Windows browsers. Currently the Windows browsers support only 1px line width (due to the use of DirectX Angle Layer).
+A couple of days ago I'm faced with the problem: how to draw lines with custom width of line on WebGL into the Windows browsers. Currently the Windows browsers support only 1px line width (due to the use of DirectX Angle Layer).
 You can check it yourself here.
+
 If you take a pause and try to search over the Internet, you will find one of following decisions:
 - Using the command line parameter for Chrome: --use-gl=desktop
 It says Chrome should use OpenGL instead of DirectX
